@@ -1,20 +1,49 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+
+
+
+<ion-header>
+  <app-nav-bar
+  [newsTitle]="'NOTICIAS CARPIO 3E2 '"
+  (buscarEvent)="onBuscar($event)">
+  </app-nav-bar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content>
+  <ion-row class="news-row">
+    <ion-col size="12" size-md="6" size-lg="4">
+      <app-news-card
+        [Title]="'NOTICIA 1'"
+        [description]="'En lo que va del año en Azuay se han consumido 568 hectáreas de bosque en Azuay'"
+        [img]="'../../assets/Azuay.jpg'"
+      ></app-news-card>
+    </ion-col>
+    <ion-col size="12" size-md="6" size-lg="4">
+      <app-news-card
+        [Title]="'NOTICIA 2'"
+        [description]="'13 procesados por asaltar canal de televisión en Ecuador'"
+        [img]="'../../assets/Terrorismo.jpg'"
+     ></app-news-card>
+    </ion-col>
+    <ion-col size="12" size-md="6" size-lg="4">
+      <app-news-card
+        [Title]="'NOTICIA 3'"
+        [description]="'Narcotráfico: un poder paralelo al del Estado'"
+        [img]="'../../assets/Narcotrafico.jpg'"
+    ></app-news-card>
+    </ion-col>
+    <ion-col size="12" size-md="6" size-lg="4">
+      <app-news-card
+        [Title]="'NOTICIA 4'"
+        [description]="'Cuenca amanece desolada y con negocios cerrados'"
+        [img]="'../../assets/Desolado.jpg'"
+     ></app-news-card>
+    </ion-col>
+    <ion-col size="12" size-md="6" size-lg="4">
+      <app-news-card
+        [Title]="'NOTICIA 5'"
+        [description]="'Familiares piden que se liberen a personas retenidas en la cárcel de Turi'"
+        [img]="'../../assets/Carcel.jpg'"
+      ></app-news-card>
+    </ion-col>
+  </ion-row>
 </ion-content>

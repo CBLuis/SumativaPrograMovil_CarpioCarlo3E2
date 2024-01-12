@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar color="primary" >
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon slot="icon-only" name="menu"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title>
+      {{ newsTitle }}
+    </ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <input type="text" [(ngModel)]="newsTitle" placeholder="Buscar...">
+    <button (click)="onBuscar()"></button>
+  </ion-toolbar>
+</ion-header>
